@@ -1,8 +1,6 @@
 from models import Dog
 
 def create_table(Base):
-    from sqlalchemy import create_engine
-    engine = create_engine('sqlite:///dogs.db')
     Base.metadata.create_all()
 
 def save(session, dog):
